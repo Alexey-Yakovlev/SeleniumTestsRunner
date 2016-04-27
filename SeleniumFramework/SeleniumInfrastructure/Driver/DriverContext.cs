@@ -17,10 +17,12 @@ namespace SeleniumFramework.SeleniumInfrastructure.Driver
 
         public Browser Browser { get; private set; }
 
+      
         public Browser SetBrowser(Browser.BrowserType browserType)
         {
-            return SetBrowser(browserType);
-        }  
+            Browser = _browserService.GetBrowser(browserType);
+            return Browser;
+        }
 
         private readonly IBrowserService _browserService;
     }
