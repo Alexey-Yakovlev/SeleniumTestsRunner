@@ -19,14 +19,8 @@ namespace SeleniumFramework.SeleniumInfrastructure.Driver
 
         public Browser SetBrowser(Browser.BrowserType browserType)
         {
-            return SetBrowser(browserType, false);
-        }
-
-        public Browser SetBrowser(Browser.BrowserType browserType, bool useLogging)
-        {
-            Browser = _browserService.GetBrowser(browserType, useLogging);
-            return Browser;
-        }
+            return SetBrowser(browserType);
+        }  
 
         private readonly IBrowserService _browserService;
     }
