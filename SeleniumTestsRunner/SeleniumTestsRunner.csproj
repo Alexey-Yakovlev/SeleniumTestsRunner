@@ -59,11 +59,12 @@
   <ItemGroup>
     <Compile Include="TestRunnerInfrastructure\Browsers\Browser.cs" />
     <Compile Include="TestRunnerInfrastructure\Browsers\BrowserService.cs" />
-    <Compile Include="TestRunnerInfrastructure\Browsers\BrowserSettingsService.cs" />
-    <Compile Include="TestRunnerInfrastructure\Browsers\DriverService.cs" />
+    <Compile Include="TestRunnerInfrastructure\Drivers\Driver.cs" />
+    <Compile Include="TestRunnerInfrastructure\Drivers\DriverSettingsService.cs" />
+    <Compile Include="TestRunnerInfrastructure\Drivers\LocalDriverService.cs" />
     <Compile Include="TestRunnerInfrastructure\Browsers\IBrowserService.cs" />
-    <Compile Include="TestRunnerInfrastructure\Browsers\IDriverService.cs" />
-    <Compile Include="TestRunnerInfrastructure\Browsers\RemoteDriverService.cs" />
+    <Compile Include="TestRunnerInfrastructure\Drivers\IDriverService.cs" />
+    <Compile Include="TestRunnerInfrastructure\Drivers\RemoteDriverService.cs" />
     <Compile Include="TestRunnerInfrastructure\Config\ISettings.cs" />
     <Compile Include="TestRunnerInfrastructure\Config\Settings.cs" />
     <Compile Include="TestRunnerInfrastructure\AppDirectory\AppWorkingDirectoryService.cs" />
