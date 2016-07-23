@@ -1,11 +1,11 @@
 ﻿using OpenQA.Selenium;
 using SeleniumTestsRunner.TestRunnerInfrastructure.Config;
 
-namespace SeleniumTestsRunner.TestRunnerInfrastructure.Browsers
+namespace SeleniumTestsRunner.TestRunnerInfrastructure.Drivers
 {
-    internal class BrowserSettingsService
+    internal class DriverSettingsService
     {
-        public void SetBrowserSettings(IWebDriver driver, ISettings settings)
+        public void SetDriverSettings(IWebDriver driver, ISettings settings)
         {
             driver.Manage().Timeouts().ImplicitlyWait(settings.ImplicitWaitTime);
 

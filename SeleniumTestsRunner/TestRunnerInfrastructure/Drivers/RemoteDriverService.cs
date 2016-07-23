@@ -1,8 +1,8 @@
-﻿using OpenQA.Selenium;
+﻿using System;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
-using System;
 
-namespace SeleniumTestsRunner.TestRunnerInfrastructure.Browsers
+namespace SeleniumTestsRunner.TestRunnerInfrastructure.Drivers
 {
     internal class RemoteDriverService : IDriverService
     {

@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace SeleniumTestsRunner.TestRunnerInfrastructure.Browsers
+namespace SeleniumTestsRunner.TestRunnerInfrastructure.Drivers
 {
     internal interface IDriverService
     {
