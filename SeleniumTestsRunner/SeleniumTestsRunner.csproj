@@ -60,6 +60,8 @@
     <Compile Include="TestRunnerInfrastructure\Browsers\Browser.cs" />
     <Compile Include="TestRunnerInfrastructure\Browsers\BrowserService.cs" />
     <Compile Include="TestRunnerInfrastructure\Drivers\Driver.cs" />
+    <Compile Include="TestRunnerInfrastructure\Drivers\DriverManager.cs" />
+    <Compile Include="TestRunnerInfrastructure\Drivers\DriverServiceManager.cs" />
     <Compile Include="TestRunnerInfrastructure\Drivers\DriverSettingsService.cs" />
     <Compile Include="TestRunnerInfrastructure\Drivers\LocalDriverService.cs" />
     <Compile Include="TestRunnerInfrastructure\Browsers\IBrowserService.cs" />

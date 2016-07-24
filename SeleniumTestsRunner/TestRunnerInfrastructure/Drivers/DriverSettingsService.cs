@@ -5,11 +5,18 @@ namespace SeleniumTestsRunner.TestRunnerInfrastructure.Drivers
 {
     internal class DriverSettingsService
     {
-        public void SetDriverSettings(IWebDriver driver, ISettings settings)
-        {
-            driver.Manage().Timeouts().ImplicitlyWait(settings.ImplicitWaitTime);
+        private readonly ISettings _settings;
 
-            driver.Url = settings.Url;
+        public DriverSettingsService(ISettings settings)
+        {
+            _settings = settings;
+        }
+
+        public void SetDriverSettings(IWebDriver driver)
+        {
+            driver.Manage().Timeouts().ImplicitlyWait(_settings.ImplicitWaitTime);
+
+            driver.Url = _settings.Url;
         }
     }
 }

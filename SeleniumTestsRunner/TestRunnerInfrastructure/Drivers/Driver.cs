@@ -17,51 +17,22 @@ namespace SeleniumTestsRunner.TestRunnerInfrastructure.Drivers
         internal IWebDriver CreateDriverForBrowser(Browser.BrowserType browserType)
         {
             IWebDriver driver;
+            var driverManager = new DriverManager(_settings);
             if (_settings.UseLogging)
             {
                 ILoggingService loggingService = new LoggingService();
-                driver = loggingService.EnableLoggingForDriver(SelectDriver(browserType));
+                driver = loggingService.EnableLoggingForDriver(driverManager.SelectDriver(browserType));
             }
             else
             {
-                driver = SelectDriver(browserType);
+                driver = driverManager.SelectDriver(browserType);
             }
 
-            var driverSettingsService = new DriverSettingsService();
-            driverSettingsService.SetDriverSettings(driver, _settings);
+            var driverSettingsService = new DriverSettingsService(_settings);
+            driverSettingsService.SetDriverSettings(driver);
 
             return driver;
         }
 
-        private IWebDriver SelectDriver(Browser.BrowserType browserType)
-        {
-            IWebDriver driver;
-            var driverService = SelectDriverService();
-
-            switch (browserType)
-            {
-                default:
-                    driver = driverService.GetDriver(browserType.ToString());
-                    break;
-                case Browser.BrowserType.ReadFromSettings:
-                    driver = driverService.GetDriver(_settings.Browser);
-                    break;
-            }
-            return driver;
-        }
-
-        private IDriverService SelectDriverService()
-        {
-            IDriverService driverService;
-            if (_settings.UseRemoteBrowser)
-            {
-                driverService = new RemoteDriverService();
-            }
-            else
-            {
-                driverService = new LocalDriverService();
-            }
-            return driverService;
-        }
     }
 }

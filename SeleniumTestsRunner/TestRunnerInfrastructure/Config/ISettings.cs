@@ -5,7 +5,7 @@ namespace SeleniumTestsRunner.TestRunnerInfrastructure.Config
     internal interface ISettings
     {
         bool UseLogging { get; }
-        bool UseRemoteBrowser { get; }
+        bool UseRemoteDriver { get; }
         string Browser { get; }
         string Url { get; }
         string TestFolder { get;}

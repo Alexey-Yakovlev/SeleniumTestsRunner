@@ -10,7 +10,7 @@ namespace SeleniumTestsRunner.TestRunnerInfrastructure.Config
         private string _testFolder;
         private string _url;
         private bool _useLogging;
-        private bool _useRemoteBrowser;
+        private bool _useRemoteDriver;
 
         public string Url
         {
@@ -49,12 +49,12 @@ namespace SeleniumTestsRunner.TestRunnerInfrastructure.Config
             }
         }
 
-        public bool UseRemoteBrowser
+        public bool UseRemoteDriver
         {
             get
             {
-                _useRemoteBrowser = Convert.ToBoolean(ConfigurationManager.AppSettings["UseRemoteBrowser"]);
-                return _useRemoteBrowser;
+                _useRemoteDriver = Convert.ToBoolean(ConfigurationManager.AppSettings["UseRemoteBrowser"]);
+                return _useRemoteDriver;
             }
         }
 
