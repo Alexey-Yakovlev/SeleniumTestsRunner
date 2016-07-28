@@ -11,7 +11,6 @@ namespace SeleniumTestsRunner.TestRunnerInfrastructure.Drivers
             switch (browser)
             {
                 case "Firefox":
-                    //For demo, works only for F46
                     //register Hub - java -jar selenium-server-standalone-2.53.1.jar -role hub
                     //register Node - java -jar selenium-server-standalone-2.53.1.jar -role webdriver -hub http://192.168.1.6:4444/grid/register
                     DesiredCapabilities capabilites = DesiredCapabilities.Firefox();

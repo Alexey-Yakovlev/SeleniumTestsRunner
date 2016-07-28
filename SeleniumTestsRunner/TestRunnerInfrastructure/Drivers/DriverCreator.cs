@@ -5,11 +5,11 @@ using SeleniumTestsRunner.TestRunnerInfrastructure.Logging;
 
 namespace SeleniumTestsRunner.TestRunnerInfrastructure.Drivers
 {
-    internal class Driver
+    internal class DriverCreator
     {
         private readonly ISettings _settings;
 
-        public Driver(ISettings settings)
+        public DriverCreator(ISettings settings)
         {
             _settings = settings;
         }

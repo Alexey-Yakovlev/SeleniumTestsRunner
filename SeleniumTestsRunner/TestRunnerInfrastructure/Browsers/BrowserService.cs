@@ -14,8 +14,8 @@ namespace SeleniumTestsRunner.TestRunnerInfrastructure.Browsers
 
         public Browser GetBrowser(Browser.BrowserType browserType)
         {
-            var driver = new Driver(_settings);
-            return new Browser(driver.CreateDriverForBrowser(browserType));
+            var driverCreator = new DriverCreator(_settings);
+            return new Browser(driverCreator.CreateDriverForBrowser(browserType));
         }
         
     }
