@@ -18,11 +18,12 @@ namespace SeleniumTestsRunner.TestRunnerInfrastructure.Drivers
             switch (browser)
             {
                 case "Firefox":
-                    driverExecutableFileName = "geckodriver.exe";
-                    var firefoxDriverService = FirefoxDriverService.CreateDefaultService(pathToDriver, driverExecutableFileName);
-                    string firefoxBinaryPath = @"C:\Program Files (x86)\Mozilla Firefox\firefox.exe";
-                    firefoxDriverService.FirefoxBinaryPath = firefoxBinaryPath;
-                    return new FirefoxDriver(firefoxDriverService);
+                    //driverExecutableFileName = "geckodriver.exe";
+                    //var firefoxDriverService = FirefoxDriverService.CreateDefaultService(pathToDriver, driverExecutableFileName);
+                    //string firefoxBinaryPath = @"C:\Program Files (x86)\Mozilla Firefox\firefox.exe";
+                    //firefoxDriverService.FirefoxBinaryPath = firefoxBinaryPath;
+                    //return new FirefoxDriver(firefoxDriverService);
+                    return new FirefoxDriver();
                 case "Chrome":
                     driverExecutableFileName = "chromedriver.exe";
                     var chromeDriverService = ChromeDriverService.CreateDefaultService(pathToDriver, driverExecutableFileName);
@@ -35,7 +36,7 @@ namespace SeleniumTestsRunner.TestRunnerInfrastructure.Drivers
                     // configure - http://stackoverflow.com/questions/21330079/i-o-exception-and-unable-to-find-element-in-ie-using-selenium-webdriver/21373224#21373224
                     driverExecutableFileName = "IEDriverServer.exe";
                     var iEDriverService = InternetExplorerDriverService.CreateDefaultService(pathToDriver, driverExecutableFileName);
-                    return new InternetExplorerDriver();
+                    return new InternetExplorerDriver(iEDriverService);
                 default:
                     throw new ArgumentException(browser + "- Not supported browser");
             }
